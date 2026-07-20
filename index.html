@@ -397,11 +397,59 @@
     }
 
     @media (max-width: 600px) {
-      body { padding: 10px; }
-      .window { margin-top: 32px; }
-      .window-body { padding: 12px 14px; }
-      .project-content { align-items: flex-start; }
-      .project-photo-frame { width: 104px; height: 104px; }
+      body { padding: 8px; }
+      .window { margin-top: 30px; }
+      .window-body { padding: 12px 10px; }
+
+      /* Stack header: photo above name */
+      .header-row {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-photo {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 8px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Stack project cards vertically */
+      .project-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .project-photo-frame {
+        width: 100%;
+        height: 160px;
+        max-width: 280px;
+        order: -1;
+        margin-bottom: 10px;
+      }
+
+      .project-details {
+        width: 100%;
+      }
+
+      /* Experience items with logo */
+      .experience-item--with-logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .experience-logo {
+        align-self: center;
+      }
+
+      h1 { font-size: 20px; }
     }
   </style>
 </head>
@@ -454,7 +502,7 @@
     </div>
     <div class="window-body">
 
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px;">
+      <div class="header-row" style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px;">
         <div style="flex:1;min-width:0;">
           <h1 style="margin-bottom:4px;">Zach Malkani</h1>
           <p style="margin-bottom:10px;">Amateur engineer, Royal St. George's College '27 Prefect</p>
@@ -465,7 +513,7 @@
             <a href="mailto:zmalkani@rsgc.on.ca">Contact</a>
           </div>
         </div>
-        <div style="height:180px;width:180px;flex-shrink:0;border:1px solid var(--border-dark);border-top-color:var(--shadow-dark);border-left-color:var(--shadow-dark);border-right-color:var(--shadow-light);border-bottom-color:var(--shadow-light);padding:2px;box-sizing:border-box;overflow:hidden;">
+        <div class="header-photo" style="height:180px;width:180px;flex-shrink:0;border:1px solid var(--border-dark);border-top-color:var(--shadow-dark);border-left-color:var(--shadow-dark);border-right-color:var(--shadow-light);border-bottom-color:var(--shadow-light);padding:2px;box-sizing:border-box;overflow:hidden;">
           <div style="width:100%;height:100%;background:url('IMG_0873.JPG') center center / 140% auto no-repeat;"></div>
         </div>
       </div>
