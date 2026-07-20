@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Z. Malkani</title>
-  <meta name="description" content="Personal website of Z. Malkani" />
+  <title>zachmalkani.ca</title>
+  <meta name="description" content="just click the tab!" />
   <style>
     :root {
       --bone: #f5f0e8;
@@ -47,7 +47,7 @@
       align-items: center;
       padding: 0 12px;
       z-index: 1000;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       font-size: 13px;
     }
 
@@ -102,7 +102,7 @@
     .window-title .title-text {
       flex: 1;
       text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       font-size: 12px;
       font-weight: bold;
     }
@@ -126,14 +126,14 @@
 
     /* Content sections */
     h1 {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 6px;
     }
 
     h2 {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       font-size: 15px;
       font-weight: bold;
       margin-bottom: 8px;
@@ -159,7 +159,7 @@
       padding: 6px 0;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       font-size: 12px;
     }
 
@@ -181,6 +181,43 @@
       border-left-color: var(--shadow-light);
       padding: 12px 14px;
       margin-bottom: 12px;
+    }
+
+    .project-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .project-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .project-photo-frame {
+      width: 124px;
+      height: 124px;
+      background: var(--bone);
+      border: 1px solid var(--border-dark);
+      border-top-color: var(--shadow-dark);
+      border-left-color: var(--shadow-dark);
+      border-right-color: var(--shadow-light);
+      border-bottom-color: var(--shadow-light);
+      padding: 2px;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .project-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-photo--mantis {
+      transform: scale(1.5);
+      object-position: center 78%;
     }
 
     .project h3 {
@@ -284,6 +321,8 @@
       body { padding: 10px; }
       .window { margin-top: 32px; }
       .window-body { padding: 12px 14px; }
+      .project-content { align-items: flex-start; }
+      .project-photo-frame { width: 104px; height: 104px; }
     }
   </style>
 </head>
@@ -305,7 +344,7 @@
       <div class="icon-img">&#128190;</div>
       <span>GitHub</span>
     </a>
-    <a href="https://www.linkedin.com/in/zmalkani/" class="desktop-icon" target="_blank" rel="noreferrer">
+    <a href="https://www.linkedin.com/in/zach-malkani-7353933a9" class="desktop-icon" target="_blank" rel="noreferrer">
       <div class="icon-img">&#128196;</div>
       <span>LinkedIn</span>
     </a>
@@ -316,19 +355,19 @@
     <div class="window-title">
       <span class="btn-close"></span>
       <span class="stripes"></span>
-      <span class="title-text">Z. Malkani</span>
+      <span class="title-text">zach malkani</span>
       <span class="stripes"></span>
     </div>
     <div class="window-body">
 
-      <h1>Z. Malkani</h1>
+      <h1>zach malkani</h1>
       <p>Developer &amp; builder of things.</p>
 
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="https://github.com/zmalkani" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://github.com/zmalkani" target="_blank" rel="noreferrer">Contact</a>
+        <a href="zmalkani@rsgc.on.ca" target="_blank" rel="noreferrer">Contact</a>
       </div>
 
       <!-- Projects -->
@@ -336,15 +375,42 @@
         <h2>Projects</h2>
 
         <div class="project">
-          <h3>openRow-mantis</h3>
-          <p>Open-source rowing performance tracker and analytics platform.</p>
-          <a href="https://github.com/zmalkani/openRow-mantis" target="_blank" rel="noreferrer">View on GitHub &rarr;</a>
+          <div class="project-content">
+            <div class="project-details">
+              <h3>openRow-mantis</h3>
+              <p>Open-source rowing performance tracker and analytics platform.</p>
+              <a href="https://github.com/zmalkani/openRow-mantis" target="_blank" rel="noreferrer">View on GitHub &rarr;</a>
+            </div>
+            <div class="project-photo-frame">
+              <img class="project-photo project-photo--mantis" src="IMG_5955.jpeg" alt="openRow Mantis telemetry unit mounted on a rowing shell" />
+            </div>
+          </div>
         </div>
 
         <div class="project">
-          <h3>Malkani Bike Computer</h3>
-          <p>Custom bike computer built from scratch &mdash; hardware and software for real-time ride data.</p>
-          <a href="https://github.com/zmalkani/Malkani-Bike-Computer" target="_blank" rel="noreferrer">View on GitHub &rarr;</a>
+          <div class="project-content">
+            <div class="project-details">
+              <h3>Malkani Bike Computer</h3>
+              <p>Open-source hardware and software bike computer for real-time speed, cadence, and distance.</p>
+              <a href="https://github.com/zmalkani/Malkani-Bike-Computer-Project" target="_blank" rel="noreferrer">View on GitHub &rarr;</a>
+            </div>
+            <div class="project-photo-frame">
+              <img class="project-photo" src="IMG_4139.png" alt="Malkani Bike Computer enclosure and circuit board" />
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <div class="project-details">
+              <h3>Design Engineering Report</h3>
+              <p>All reports since Grade 10, at the RSGC Advanced Computer Engineering program.</p>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">View PDF &rarr;</a>
+            </div>
+            <div class="project-photo-frame">
+              <img class="project-photo" src="IMG_3209.jpeg" alt="Design Engineering Report circuit board" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -353,8 +419,8 @@
         <h2>Experience</h2>
 
         <div class="experience-item">
-          <div class="role">Role Title</div>
-          <div class="company">Company / Organization</div>
+          <div class="role">CarbUp</div>
+          <div class="company">Sports Nutrition Company</div>
           <div class="dates">Start &ndash; End</div>
           <div class="desc">Brief description of responsibilities and accomplishments.</div>
         </div>
@@ -374,9 +440,7 @@
         </div>
       </div>
 
-      <div class="footer-text">
-        &copy; <span id="year"></span> Z. Malkani &mdash; Built with plain HTML + CSS.
-      </div>
+      
 
     </div>
   </div>
